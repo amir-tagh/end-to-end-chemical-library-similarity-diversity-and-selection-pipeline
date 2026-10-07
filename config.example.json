@@ -1,0 +1,9 @@
+{
+  "io": {"query":"query.smi","parent":"parent.smi","outdir":"chemdiv_out","smiles_column":"SMILES","id_column":"ID","delimiter":null,"chunksize":50000},
+  "standardize": {"cleanup":true,"largest_fragment":true,"uncharger":true,"canonical_tautomer":false,"remove_stereo":false},
+  "similarity": {"fingerprint":"morgan","fp_mode":"bit","n_bits":2048,"radius":3,"min_path":1,"max_path":7,"use_chirality":false,"metric":"tversky","threshold":0.60,"tversky_alpha":0.9,"tversky_beta":0.1,"aggregate":"max","top_n_per_query":0},
+  "clustering": {"enabled":true,"sample_size":200000,"n_clusters":50000,"batch_size":4096,"max_iter_stage1":100,"max_iter_stage2":100,"n_init_stage1":3,"random_state":42,"representative":"nearest_centroid"},
+  "profiling": {"enabled":true,"generate_3d":true,"max_3d_molecules":50000,"num_confs":10,"prune_rms_thresh":0.5,"optimize":"MMFF","pmi_sample":50000},
+  "selection": {"enabled":true,"n_select":1000,"qed_min":0.35,"qed_weight":0.45,"diversity_weight":0.35,"scaffold_weight":0.20,"max_per_scaffold":1,"pool_size":10000,"selection_fp":"morgan","selection_radius":3,"selection_bits":2048},
+  "plots": {"enabled":true,"dpi":250,"max_points":50000,"umap":true,"tsne":false,"top_scaffolds":30}
+}
